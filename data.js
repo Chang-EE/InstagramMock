@@ -179,7 +179,11 @@ const DATA = {
 
                 "assets/highlights/cheer/hc45.png",
                 
-                "assets/highlights/cheer/hc46.png"
+                "assets/highlights/cheer/hc46.png",
+
+                "assets/highlights/cheer/hc47.png",
+                
+                "assets/highlights/cheer/hc48.png"
             ]
 
         },
@@ -260,6 +264,39 @@ const DATA = {
     ====================================================== */
 
     posts: [
+
+        {
+
+            id: 4,
+
+            location: "수원 kt위즈파크",
+
+            caption: "지난번에 엄청 반응이 좋길래 또 갔어요 ㅎ. 너무 흥분해서 응원단상까지 올라가버림..ㅎㅎ",
+
+            images: [
+
+                "assets/posts/post001/1.jpg",
+                "assets/posts/post001/2.jpg",
+                "assets/posts/post001/3.jpg",
+                "assets/posts/post001/4.jpg",
+                "assets/posts/post001/5.jpg",
+                "assets/posts/post001/6.jpg",
+                "assets/posts/post001/7.jpg",
+                "assets/posts/post001/8.jpg",
+                "assets/posts/post001/9.jpg",
+                "assets/posts/post001/10.jpg",
+                "assets/posts/post001/11.jpg",
+
+            ],
+
+            likes: 38212,
+
+            comments: 849,
+
+            date: "2023-09-23"
+
+        },    
+
         /* =====================================================
            [수정] 게시물 1
         ====================================================== */
@@ -271,20 +308,20 @@ const DATA = {
                절대 중복되면 안 됩니다.
             ================================ */
 
-            id: 1,
+            id: 3,
 
             /* ================================
                [수정] 위치
                없으면 "" 로 두세요.
             ================================ */
 
-            location: "Everland",
+            location: "수원 kt위즈파크",
 
             /* ================================
                [수정] 게시물 설명
             ================================ */
 
-            caption: "에버랜드에서 찍은 하루 🎡",
+            caption: "야구 첫 직관인데, 중계화면에 잡혔당 ㅎ",
 
             /* ================================
                [수정] 사진
@@ -293,11 +330,10 @@ const DATA = {
 
             images: [
 
-                "assets/posts/post001/1.jpg",
-
-                "assets/posts/post001/2.jpg",
-
-                "assets/posts/post001/3.jpg"
+                "assets/posts/post002/1.jpg",
+                "assets/posts/post002/2.jpg",
+                "assets/posts/post002/3.jpg",
+                "assets/posts/post002/4.jpg"
 
             ],
 
@@ -305,7 +341,7 @@ const DATA = {
                [수정] 좋아요
             ================================ */
 
-            likes: 52341,
+            likes: 23781,
 
             /* ================================
                [수정] 댓글 수
@@ -317,7 +353,7 @@ const DATA = {
                [수정] 업로드 날짜
             ================================ */
 
-            date: "2026-06-27"
+            date: "2023-09-17"
 
         },
 
@@ -331,21 +367,26 @@ const DATA = {
 
             id: 2,
 
-            location: "",
+            location: "on the sky",
 
-            caption: "퇴근 ☕",
+            caption: "대한항공 1등 스튜어디스 희쨩입니당🩵",
 
             images: [
 
-                "assets/posts/post002/1.jpg"
+                "assets/posts/post031/1.jpg",
+                "assets/posts/post031/2.jpg",
+                "assets/posts/post031/3.jpg",
+                "assets/posts/post031/4.jpg",
+                "assets/posts/post031/5.jpg",
+                "assets/posts/post031/6.jpg"
 
             ],
 
-            likes: 18213,
+            likes: 182,
 
-            comments: 91,
+            comments: 8,
 
-            date: "2026-06-26"
+            date: "2021-03-21"
 
         },
 
@@ -357,25 +398,25 @@ const DATA = {
 
         {
 
-            id: 3,
+            id: 1,
 
-            location: "KT Wiz Park",
+            location: "Osaka, Japan",
 
-            caption: "오늘도 응원 완료 💙",
+            caption: "비오는 날, 이게 낭만이지",
 
             images: [
 
-                "assets/posts/post003/1.jpg",
+                "assets/posts/post019/1.png",
 
-                "assets/posts/post003/2.jpg"
+                "assets/posts/post019/2.png"
 
             ],
 
-            likes: 87422,
+            likes: 52,
 
-            comments: 482,
+            comments: 12,
 
-            date: "2026-06-25"
+            date: "2017-06-25"
 
         }
 
