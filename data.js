@@ -22,7 +22,7 @@ const DATA = {
            [수정] 표시 이름
         ================================ */
 
-        displayName: "Hee Chan",
+        displayName: "희쨩🖤",
 
         /* ================================
            [수정] 인증 배지
@@ -35,7 +35,7 @@ const DATA = {
            [수정] 프로필 사진
         ================================ */
 
-        profileImage: "assets/profile/profile.jpg",
+        profileImage: "assets/profile/p.jpg",
 
         /* ================================
            [수정] 팔로워
@@ -56,11 +56,11 @@ const DATA = {
 
         bio: [
 
-            "KT Wiz Cheerleader",
+            "ktwiz 치어리더",
 
-            "끌리는대로 살자 🤍",
+            "꼴리는대로 살자 🤍",
 
-            "Instagram Mock"
+            "그렇다고 너무 빨딱 서버리진 마요😘"
 
         ],
 
@@ -68,7 +68,7 @@ const DATA = {
            [수정] 링크
         ================================ */
 
-        link: "https://example.com"
+        link: "https://chang-ee.github.io/InstagramMock/"
 
     },
 
@@ -83,18 +83,103 @@ const DATA = {
 
         {
 
-            title: "Cheer",
+            title: "치어리딩",
 
-            cover: "assets/highlights/cheer/cover.jpg",
+            cover: "assets/highlights/cheer/hcc.png",
 
             stories: [
 
-                "assets/highlights/cheer/1.jpg",
+                "assets/highlights/cheer/hc1.jpg",
 
-                "assets/highlights/cheer/2.jpg",
+                "assets/highlights/cheer/hc2.jpg",
 
-                "assets/highlights/cheer/3.jpg"
+                "assets/highlights/cheer/hc3.jpg",
 
+                "assets/highlights/cheer/hc4.jpg",
+
+                "assets/highlights/cheer/hc5.jpg",
+
+                "assets/highlights/cheer/hc6.jpg",
+
+                "assets/highlights/cheer/hc7.jpg",
+
+                "assets/highlights/cheer/hc8.jpg",
+
+                "assets/highlights/cheer/hc9.jpg",
+                
+                "assets/highlights/cheer/hc10.jpg",
+
+                "assets/highlights/cheer/hc11.jpg",
+
+                "assets/highlights/cheer/hc12.jpg",  
+
+                "assets/highlights/cheer/hc13.jpg",
+
+                "assets/highlights/cheer/hc14.jpg",
+
+                "assets/highlights/cheer/hc15.jpg",
+
+                "assets/highlights/cheer/hc16.jpg",
+
+                "assets/highlights/cheer/hc17.jpg",
+
+                "assets/highlights/cheer/hc18.jpg",
+
+                "assets/highlights/cheer/hc19.jpg",
+
+                "assets/highlights/cheer/hc20.jpg",
+
+                "assets/highlights/cheer/hc21.jpg",
+                
+                "assets/highlights/cheer/hc22.jpg",
+
+                "assets/highlights/cheer/hc23.jpg",
+
+                "assets/highlights/cheer/hc24.jpg",                              
+
+                "assets/highlights/cheer/hc25.jpg",
+
+                "assets/highlights/cheer/hc26.jpg",
+
+                "assets/highlights/cheer/hc27.png",
+
+                "assets/highlights/cheer/hc28.png",
+
+                "assets/highlights/cheer/hc29.png",
+
+                "assets/highlights/cheer/hc30.jpg",
+
+                "assets/highlights/cheer/hc31.jpg",
+
+                "assets/highlights/cheer/hc32.jpg",
+
+                "assets/highlights/cheer/hc33.jpg",
+                
+                "assets/highlights/cheer/hc34.jpg",
+
+                "assets/highlights/cheer/hc35.jpg",
+
+                "assets/highlights/cheer/hc36.png",
+
+                "assets/highlights/cheer/hc37.png",
+
+                "assets/highlights/cheer/hc38.png",
+
+                "assets/highlights/cheer/hc39.png",
+
+                "assets/highlights/cheer/hc40.png",
+
+                "assets/highlights/cheer/hc41.png",
+
+                "assets/highlights/cheer/hc42.png",
+
+                "assets/highlights/cheer/hc43.png",
+
+                "assets/highlights/cheer/hc44.png",
+
+                "assets/highlights/cheer/hc45.png",
+                
+                "assets/highlights/cheer/hc46.png"
             ]
 
         },
