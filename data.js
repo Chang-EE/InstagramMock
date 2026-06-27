@@ -409,7 +409,8 @@ const DATA = {
             location: "Osaka, Japan",
 
             caption: [
-                "비오는 날, 친구들과. \n 이게 낭만이지"
+                "비오는 날, 친구들과.", 
+                "이게 낭만이지",
             ],
 
             images: [
