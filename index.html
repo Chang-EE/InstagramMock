@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,55 +11,384 @@
 
     <!-- Material Symbols -->
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
     <!-- Swiper -->
     <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
+
 <body>
 
-<div class="app">
+    <div id="app">
 
-    <!-- 상단 -->
-    <header class="profile-header">
+        <!-- =========================
+             상단 헤더
+        ========================== -->
 
-        <div class="profile-top">
+        <header id="topBar">
 
-            <img id="profileImage"
-                 src="assets/profile/profile.jpg"
-                 class="profile-image">
+            <div class="top-left">
 
-            <div class="profile-info">
+                <div id="usernameArea">
 
-                <div class="profile-name-row">
+                    <span id="usernameText"></span>
 
-                    <span class="username">
-                        username
+                    <span class="material-symbols-outlined">
+                        keyboard_arrow_down
                     </span>
 
-                    <span class="verified material-symbols-outlined">
-                        verified
+                </div>
+
+            </div>
+
+            <div class="top-right">
+
+                <button id="btnThreads">
+
+                    <span class="material-symbols-outlined">
+                        alternate_email
                     </span>
+
+                </button>
+
+                <button id="btnAdd">
+
+                    <span class="material-symbols-outlined">
+                        add_box
+                    </span>
+
+                </button>
+
+                <button id="btnMenu">
+
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- =========================
+             프로필
+        ========================== -->
+
+        <section id="profileSection">
+
+            <div class="profile-top">
+
+                <div class="profile-image-wrap">
+
+                    <img
+                        id="profileImage"
+                        src=""
+                        alt="프로필">
 
                 </div>
 
                 <div class="profile-stats">
 
-                    <div>
-                        <strong id="postCount">0</strong>
+                    <div class="profile-stat">
+
+                        <strong id="postCount"></strong>
+
                         <span>게시물</span>
+
                     </div>
 
-                    <div>
-                        <strong>2.1만</strong>
+                    <div class="profile-stat">
+
+                        <strong id="followerCount"></strong>
+
                         <span>팔로워</span>
+
                     </div>
 
-                    <div>
-                        <strong>310</strong>
+                    <div class="profile-stat">
+
+                        <strong id="followingCount"></strong>
+
                         <span>팔로잉</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile-info">
+
+                <div id="displayName"></div>
+
+                <div id="bioText"></div>
+
+                <a
+                    id="profileLink"
+                    href=""
+                    target="_blank">
+                </a>
+
+            </div>
+
+            <div class="profile-buttons">
+
+                <button id="editProfileBtn">
+                    프로필 편집
+                </button>
+
+                <button id="shareProfileBtn">
+                    프로필 공유
+                </button>
+
+                <button id="contactBtn">
+
+                    <span class="material-symbols-outlined">
+                        person_add
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             하이라이트
+        ========================== -->
+
+        <section id="highlightSection">
+
+            <!-- JS에서 자동 생성 -->
+
+        </section>
+
+        <!-- =========================
+             게시물 탭
+        ========================== -->
+
+        <nav id="profileTabs">
+
+            <button
+                class="profile-tab active"
+                data-tab="posts">
+
+                <span class="material-symbols-outlined">
+                    grid_on
+                </span>
+
+            </button>
+
+            <button
+                class="profile-tab"
+                data-tab="reels">
+
+                <span class="material-symbols-outlined">
+                    movie
+                </span>
+
+            </button>
+
+            <button
+                class="profile-tab"
+                data-tab="tagged">
+
+                <span class="material-symbols-outlined">
+                    person_pin
+                </span>
+
+            </button>
+
+        </nav>
+
+        <!-- =========================
+             피드
+        ========================== -->
+
+        <main id="feed">
+
+            <!-- JS에서 자동 생성 -->
+
+        </main>
+
+        <!-- =====================================
+     BOTTOM NAVIGATION
+====================================== -->
+
+<nav id="bottomNav">
+
+    <button class="nav-btn active">
+
+        <span class="material-symbols-outlined">
+            home
+        </span>
+
+    </button>
+
+    <button class="nav-btn">
+
+        <span class="material-symbols-outlined">
+            search
+        </span>
+
+    </button>
+
+    <button class="nav-btn">
+
+        <span class="material-symbols-outlined">
+            smart_display
+        </span>
+
+    </button>
+
+    <button class="nav-btn">
+
+        <span class="material-symbols-outlined">
+            favorite
+        </span>
+
+    </button>
+
+    <button class="nav-btn profile-nav">
+
+        <img
+            id="bottomProfileImage"
+            src=""
+            alt="">
+
+    </button>
+
+</nav>
+
+        <!-- =====================================
+             게시물 모달
+        ====================================== -->
+
+        <div id="postModal" class="hidden">
+
+            <div class="modal-backdrop"></div>
+
+            <div class="modal-container">
+
+                <!-- 이미지 영역 -->
+
+                <div class="modal-media">
+
+                    <div class="swiper postSwiper">
+
+                        <div class="swiper-wrapper">
+
+                            <!-- JS에서 생성 -->
+
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-prev"></div>
+
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- 정보 영역 -->
+
+                <div class="modal-info">
+
+                    <!-- 헤더 -->
+
+                    <div class="modal-header">
+
+                        <div class="modal-profile">
+
+                            <img
+                                id="modalProfileImage"
+                                src=""
+                                alt="">
+
+                            <div class="modal-profile-info">
+
+                                <div id="modalUsername"></div>
+
+                                <div id="modalLocation"></div>
+
+                            </div>
+
+                        </div>
+
+                        <button id="closeModal">
+
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- 본문 -->
+
+                    <div class="modal-body">
+
+                        <div id="modalCaption"></div>
+
+                    </div>
+
+                    <!-- 액션 -->
+
+                    <div class="modal-actions">
+
+                        <div class="left-actions">
+
+                            <button>
+
+                                <span class="material-symbols-outlined">
+                                    favorite
+                                </span>
+
+                            </button>
+
+                            <button>
+
+                                <span class="material-symbols-outlined">
+                                    chat_bubble
+                                </span>
+
+                            </button>
+
+                            <button>
+
+                                <span class="material-symbols-outlined">
+                                    send
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                        <button>
+
+                            <span class="material-symbols-outlined">
+                                bookmark
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- 좋아요 -->
+
+                    <div id="modalLikes">
+
+                    </div>
+
+                    <!-- 날짜 -->
+
+                    <div id="modalDate">
+
                     </div>
 
                 </div>
@@ -67,126 +397,55 @@
 
         </div>
 
-        <div class="bio">
+        <!-- =====================================
+             스토리 뷰어
+        ====================================== -->
 
-            <div class="display-name">
-                이름
+        <div id="storyViewer" class="hidden">
+
+            <div id="storyProgress">
+
             </div>
 
-            <div class="bio-text">
-                소개글
+            <div id="storyContent">
+
             </div>
 
         </div>
 
-        <div class="buttons">
+        <!-- =====================================
+             이미지 확대
+        ====================================== -->
 
-            <button>프로필 편집</button>
-            <button>프로필 공유</button>
+        <div id="imageViewer" class="hidden">
 
-        </div>
-
-    </header>
-
-    <!-- 하이라이트 -->
-
-    <section class="highlights">
-
-        <!-- JS 생성 -->
-
-    </section>
-
-    <!-- 탭 -->
-
-    <nav class="tabs">
-
-        <button class="tab active">
-
-            <span class="material-symbols-outlined">
-                grid_on
-            </span>
-
-        </button>
-
-        <button class="tab">
-
-            <span class="material-symbols-outlined">
-                movie
-            </span>
-
-        </button>
-
-        <button class="tab">
-
-            <span class="material-symbols-outlined">
-                person
-            </span>
-
-        </button>
-
-    </nav>
-
-    <!-- 피드 -->
-
-    <main id="feedGrid">
-
-    </main>
-
-</div>
-
-
-<!-- 게시물 모달 -->
-
-<div id="postModal" class="modal hidden">
-
-    <div class="modal-content">
-
-        <button class="closeBtn">
-
-            ✕
-
-        </button>
-
-        <div class="swiper postSwiper">
-
-            <div class="swiper-wrapper">
-
-            </div>
-
-            <div class="swiper-pagination"></div>
+            <img
+                id="viewerImage"
+                src=""
+                alt="">
 
         </div>
 
-        <div class="postInfo">
+        <!-- =====================================
+             Toast
+        ====================================== -->
 
-            <div class="postHeader">
-
-            </div>
-
-            <div class="postActions">
-
-            </div>
-
-            <div class="caption">
-
-            </div>
+        <div id="toast">
 
         </div>
 
     </div>
 
-</div>
+    <!-- =========================
+         JS
+    ========================== -->
 
+    <script src="data.js"></script>
 
-<!-- 하이라이트 뷰어 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<div id="storyViewer" class="hidden">
-
-</div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

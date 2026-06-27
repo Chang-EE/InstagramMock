@@ -1,22 +1,35 @@
 /* =========================================================
    Instagram Mock
    script.js
-   v1.0 - Part 1
 ========================================================= */
 
-let profileData = {};
+/* =========================================================
+   전역 변수
+========================================================= */
+
 let currentPost = null;
+let currentSwiper = null;
 
-document.addEventListener("DOMContentLoaded", init);
-
+let likedPosts = new Set();
+let savedPosts = new Set();
 
 /* =========================================================
-   INIT
+   시작
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    init();
+
+});
+
+/* =========================================================
+   초기화
 ========================================================= */
 
 function init(){
 
-    profileData = DATA;
+    renderTopBar();
 
     renderProfile();
 
@@ -24,117 +37,64 @@ function init(){
 
     renderFeed();
 
+    bindEvents();
+
 }
 
+/* =========================================================
+   TopBar
+========================================================= */
+
+function renderTopBar(){
+
+    const profile = DATA.profile;
+
+    document.getElementById("usernameText").textContent =
+        profile.username;
+
+}
 
 /* =========================================================
-   PROFILE
+   Profile
 ========================================================= */
 
 function renderProfile(){
 
-    const profile = profileData.profile;
+    const profile = DATA.profile;
 
-    const section = document.getElementById("profileSection");
+    document.getElementById("profileImage").src =
+        profile.profileImage;
 
-    section.innerHTML = `
+    document.getElementById("displayName").textContent =
+        profile.displayName;
 
-    <div class="profile-top">
+    document.getElementById("postCount").textContent =
+        DATA.posts.length;
 
-        <img
-            class="profile-image"
-            src="${profile.profileImage}"
-        >
+    document.getElementById("followerCount").textContent =
+        profile.followers;
 
-        <div class="profile-info">
+    document.getElementById("followingCount").textContent =
+        profile.following;
 
-            <div class="profile-name">
+    document.getElementById("bioText").innerHTML =
+        profile.bio.join("<br>");
 
-                <span>${profile.username}</span>
+    const link =
+        document.getElementById("profileLink");
 
-                ${
-                    profile.verified
-                    ? `<span class="material-symbols-outlined profile-verified">
-                        verified
-                      </span>`
-                    : ""
-                }
+    link.href = profile.link;
 
-            </div>
+    link.textContent = profile.link;
 
-            <div class="profile-stats">
-
-                <div class="profile-stat">
-
-                    <strong>${profileData.posts.length}</strong>
-
-                    <span>게시물</span>
-
-                </div>
-
-                <div class="profile-stat">
-
-                    <strong>${profile.followers}</strong>
-
-                    <span>팔로워</span>
-
-                </div>
-
-                <div class="profile-stat">
-
-                    <strong>${profile.following}</strong>
-
-                    <span>팔로잉</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="profile-bio">
-
-        <div class="profile-display">
-
-            ${profile.displayName}
-
-        </div>
-
-        <div class="profile-bio-text">
-
-            ${profile.bio.join("<br>")}
-
-        </div>
-
-        <div class="profile-link">
-
-            ${profile.link}
-
-        </div>
-
-    </div>
-
-
-
-    <div class="profile-buttons">
-
-        <button>프로필 편집</button>
-
-        <button>프로필 공유</button>
-
-    </div>
-
-    `;
+    document
+        .getElementById("bottomProfileImage")
+        .src = profile.profileImage;
 
 }
 
-
 /* =========================================================
-   HIGHLIGHT
+   Highlight
 ========================================================= */
 
 function renderHighlights(){
@@ -144,24 +104,25 @@ function renderHighlights(){
 
     section.innerHTML = "";
 
-    profileData.highlights.forEach((item,index)=>{
+    DATA.highlights.forEach((highlight,index)=>{
 
         section.innerHTML += `
 
         <div
             class="highlight"
-            onclick="openHighlight(${index})"
-        >
+            data-index="${index}">
 
             <div class="highlight-ring">
 
-                <img src="${item.cover}">
+                <img
+                    src="${highlight.cover}"
+                    alt="">
 
             </div>
 
             <div class="highlight-title">
 
-                ${item.title}
+                ${highlight.title}
 
             </div>
 
@@ -173,43 +134,39 @@ function renderHighlights(){
 
 }
 
-
 /* =========================================================
-   FEED
+   Feed
 ========================================================= */
 
 function renderFeed(){
 
-    const feed = document.getElementById("feed");
+    const feed =
+        document.getElementById("feed");
 
-    feed.innerHTML="";
+    feed.innerHTML = "";
 
-    profileData.posts.forEach(post=>{
+    DATA.posts.forEach(post=>{
 
-        let icon="";
-
-        if(post.images.length>1){
-
-            icon=`
-                <span class="material-symbols-outlined feed-multiple">
-                    collections
-                </span>
-            `;
-
-        }
+        const multiIcon =
+            post.images.length > 1
+            ? `
+            <span class="material-symbols-outlined feed-multiple">
+                collections
+            </span>
+            `
+            : "";
 
         feed.innerHTML += `
 
         <div
             class="feed-item"
-            onclick="openPost(${post.id})"
-        >
+            data-id="${post.id}">
 
             <img
                 src="${post.images[0]}"
-            >
+                alt="">
 
-            ${icon}
+            ${multiIcon}
 
         </div>
 
@@ -219,53 +176,140 @@ function renderFeed(){
 
 }
 
-
 /* =========================================================
-   TEMP
+   EVENT
 ========================================================= */
 
-function openPost(id){
+/* =========================================================
+   EVENT
+========================================================= */
 
-    console.log("게시물",id);
+function bindEvents(){
+
+    // 피드 클릭
+    document
+        .getElementById("feed")
+        .addEventListener("click", onFeedClick);
+
+    // 닫기 버튼
+    document
+        .getElementById("closeModal")
+        .addEventListener("click", closePost);
+
+    // 모달 배경 클릭
+    document
+        .querySelector(".modal-backdrop")
+        .addEventListener("click", closePost);
+
+    // ESC
+    document.addEventListener("keydown",(e)=>{
+
+        if(e.key==="Escape"){
+    
+            closePost();
+            closeStory();
+            return;
+    
+        }
+    
+        const modal =
+            document.getElementById("postModal");
+    
+        if(modal.classList.contains("hidden")) return;
+    
+        if(e.key==="ArrowLeft"){
+    
+            openPrevPost();
+    
+        }
+    
+        if(e.key==="ArrowRight"){
+    
+            openNextPost();
+    
+        }
+    
+    });
+
+    // 하이라이트 클릭
+    document
+        .getElementById("highlightSection")
+        .addEventListener("click",(e)=>{
+
+            const item =
+                e.target.closest(".highlight");
+
+            if(!item) return;
+
+            openHighlight(
+                Number(item.dataset.index)
+            );
+
+        });
+
+    // 스토리 클릭 → 다음
+    document
+        .getElementById("storyViewer")
+        .addEventListener("click",nextStory);
 
 }
+/* =========================================================
+   FEED CLICK
+========================================================= */
 
-function openHighlight(id){
+function onFeedClick(e){
 
-    console.log("하이라이트",id);
+    const item = e.target.closest(".feed-item");
+
+    if(!item) return;
+
+    const id = Number(item.dataset.id);
+
+    openPost(id);
 
 }
-
 
 /* =========================================================
-   POST MODAL
+   POST OPEN
 ========================================================= */
 
 function openPost(id){
 
     currentPost =
-        profileData.posts.find(post => post.id === id);
+        DATA.posts.find(post=>post.id===id);
 
     if(!currentPost) return;
 
-    buildModal();
+    document
+        .getElementById("postModal")
+        .classList.add("hidden");
+
+    buildPost();
+
+    requestAnimationFrame(()=>{
+
+        document
+            .getElementById("postModal")
+            .classList.remove("hidden");
+
+    });
 
 }
 
+/* =========================================================
+   BUILD POST
+========================================================= */
 
-function buildModal(){
-
-    const modal =
-        document.getElementById("postModal");
+function buildPost(){
 
     const wrapper =
-        modal.querySelector(".swiper-wrapper");
+        document.querySelector(".swiper-wrapper");
 
     wrapper.innerHTML="";
 
     currentPost.images.forEach(image=>{
 
-        wrapper.innerHTML+=`
+        wrapper.innerHTML += `
 
         <div class="swiper-slide">
 
@@ -277,59 +321,420 @@ function buildModal(){
 
     });
 
-    document.getElementById("modalHeader").innerHTML=`
+    document
+        .getElementById("modalProfileImage")
+        .src = DATA.profile.profileImage;
 
-        <strong>
+    document
+        .getElementById("modalUsername")
+        .textContent = DATA.profile.username;
 
-            ${profileData.profile.username}
+    document
+        .getElementById("modalLocation")
+        .textContent = currentPost.location;
 
-        </strong>
+    document
+        .getElementById("modalCaption")
+        .textContent = currentPost.caption;
 
-        <br>
+    document
+        .getElementById("modalLikes")
+        .textContent =
+        `좋아요 ${currentPost.likes.toLocaleString()}개`;
 
-        ${currentPost.location}
+    document
+        .getElementById("modalDate")
+        .textContent = currentPost.date;
+
+    if(currentSwiper){
+
+        currentSwiper.destroy(true,true);
+
+    }
+
+    currentSwiper =
+        new Swiper(".postSwiper",{
+
+            loop:false,
+
+            pagination:{
+                el:".swiper-pagination",
+                clickable:true
+            },
+
+            navigation:{
+                nextEl:".swiper-button-next",
+                prevEl:".swiper-button-prev"
+            }
+
+        });
+
+    updateActionButtons();
+    bindPostActions();
+
+}
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+function closePost(){
+
+    destroySwiper();
+
+    document
+        .getElementById("postModal")
+        .classList.add("hidden");
+
+}
+/* =========================================================
+   STORY
+========================================================= */
+
+let currentHighlight = 0;
+let currentStory = 0;
+let storyTimer = null;
+
+function openHighlight(index){
+
+    currentHighlight = index;
+    currentStory = 0;
+
+    showStory();
+
+}
+/* =========================================================
+   SHOW STORY
+========================================================= */
+
+function showStory(){
+
+    const viewer =
+        document.getElementById("storyViewer");
+
+    const content =
+        document.getElementById("storyContent");
+
+    const progress =
+        document.getElementById("storyProgress");
+
+    const highlight =
+        DATA.highlights[currentHighlight];
+
+    viewer.classList.remove("hidden");
+
+    content.innerHTML = `
+
+        <img
+            src="${highlight.stories[currentStory]}"
+            alt="">
 
     `;
 
-    document.getElementById("modalCaption").innerHTML=`
+    progress.innerHTML = "";
 
-        ${currentPost.caption}
+    highlight.stories.forEach((story,index)=>{
 
-    `;
+        progress.innerHTML += `
 
-    document.getElementById("modalDate").innerHTML=`
+            <div class="story-bar">
 
-        ${currentPost.date}
+                <div
+                    class="story-bar-fill"
+                    style="width:${
+                        index<currentStory
+                        ? "100%"
+                        : "0%"
+                    }">
+                </div>
 
-    `;
+            </div>
 
-    modal.classList.remove("hidden");
-
-    new Swiper(".postSwiper",{
-
-        pagination:{
-            el:".swiper-pagination"
-        },
-
-        navigation:{
-            nextEl:".swiper-button-next",
-            prevEl:".swiper-button-prev"
-        }
+        `;
 
     });
+
+    animateStory();
+
+}
+
+/* =========================================================
+   AUTO PLAY
+========================================================= */
+
+function animateStory(){
+
+    clearTimeout(storyTimer);
+
+    const fills =
+        document.querySelectorAll(".story-bar-fill");
+
+    const fill =
+        fills[currentStory];
+
+    fill.style.transition = "none";
+    fill.style.width = "0%";
+
+    requestAnimationFrame(()=>{
+
+        fill.style.transition = "width 5s linear";
+        fill.style.width = "100%";
+
+    });
+
+    storyTimer =
+        setTimeout(nextStory,5000);
+
+}
+
+/* =========================================================
+   NEXT
+========================================================= */
+
+function nextStory(){
+
+    const stories =
+        DATA.highlights[currentHighlight].stories;
+
+    currentStory++;
+
+    if(currentStory>=stories.length){
+
+        closeStory();
+        return;
+
+    }
+
+    showStory();
+
+}
+
+/* =========================================================
+   CLOSE STORY
+========================================================= */
+
+function closeStory(){
+
+    clearTimeout(storyTimer);
+
+    document
+        .getElementById("storyViewer")
+        .classList.add("hidden");
+
+}
+
+/* =========================================================
+   KEYBOARD CONTROL
+========================================================= */
+
+document.addEventListener("keydown",(e)=>{
+
+    const modal =
+        document.getElementById("postModal");
+
+    if(modal.classList.contains("hidden")) return;
+
+    if(!currentSwiper) return;
+
+    switch(e.key){
+
+        case "ArrowLeft":
+
+            currentSwiper.slidePrev();
+
+            break;
+
+        case "ArrowRight":
+
+            currentSwiper.slideNext();
+
+            break;
+
+    }
+
+});
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    clearTimeout(showToast.timer);
+
+    showToast.timer = setTimeout(()=>{
+
+        toast.classList.remove("show");
+
+    },1800);
 
 }
 
 
+/* =========================================================
+   MODAL CLEANUP
+========================================================= */
 
-document
-.getElementById("closeModal")
-.addEventListener("click",closeModal);
+function destroySwiper(){
 
-function closeModal(){
+    if(!currentSwiper) return;
 
-    document
-    .getElementById("postModal")
-    .classList.add("hidden");
+    currentSwiper.destroy(true,true);
+
+    currentSwiper = null;
+
+}
+
+/* =========================================================
+   POST ACTION
+========================================================= */
+
+function bindPostActions(){
+
+    const buttons =
+        document.querySelectorAll(".modal-actions button");
+
+    if(buttons.length < 4) return;
+
+    buttons[0].onclick = toggleLike;
+
+    buttons[3].onclick = toggleSave;
+
+    const swiper =
+        document.querySelector(".postSwiper");
+
+    swiper.ondblclick = ()=>{
+
+        if(!likedPosts.has(currentPost.id)){
+
+            likedPosts.add(currentPost.id);
+
+            updateActionButtons();
+
+            showToast("좋아요!");
+
+        }
+
+    };
+
+}
+
+/* =========================================================
+   UPDATE BUTTON
+========================================================= */
+
+function updateActionButtons(){
+
+    const icons =
+        document.querySelectorAll(".modal-actions .material-symbols-outlined");
+
+    if(icons.length < 4) return;
+
+    if(likedPosts.has(currentPost.id)){
+
+        icons[0].classList.add("liked");
+
+    }else{
+
+        icons[0].classList.remove("liked");
+
+    }
+
+    if(savedPosts.has(currentPost.id)){
+
+        icons[3].classList.add("liked");
+
+    }else{
+
+        icons[3].classList.remove("liked");
+
+    }
+
+}
+
+/* =========================================================
+   LIKE
+========================================================= */
+
+function toggleLike(){
+
+    if(likedPosts.has(currentPost.id)){
+
+        likedPosts.delete(currentPost.id);
+
+        showToast("좋아요 취소");
+
+    }
+
+    else{
+
+        likedPosts.add(currentPost.id);
+
+        showToast("좋아요!");
+
+    }
+
+    updateActionButtons();
+
+}
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+function toggleSave(){
+
+    if(savedPosts.has(currentPost.id)){
+
+        savedPosts.delete(currentPost.id);
+
+        showToast("저장 취소");
+
+    }
+
+    else{
+
+        savedPosts.add(currentPost.id);
+
+        showToast("저장되었습니다");
+
+    }
+
+    updateActionButtons();
+
+}
+
+
+/* =========================================================
+   POST NAVIGATION
+========================================================= */
+
+function openNextPost(){
+
+    const index =
+        DATA.posts.findIndex(post=>post.id===currentPost.id);
+
+    if(index>=DATA.posts.length-1) return;
+
+    openPost(DATA.posts[index+1].id);
+
+}
+
+function openPrevPost(){
+
+    const index =
+        DATA.posts.findIndex(post=>post.id===currentPost.id);
+
+    if(index<=0) return;
+
+    openPost(DATA.posts[index-1].id);
 
 }

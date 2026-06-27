@@ -1,0 +1,1345 @@
+/* =========================================================
+   Instagram Mock
+   style.css
+========================================================= */
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:#000;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    color:#000;
+
+    overflow-y:scroll;
+
+}
+
+
+/* =========================================================
+   [수정]
+   모바일 화면 최대 폭
+========================================================= */
+
+:root{
+
+    --app-width:390px;
+
+    --background:#ffffff;
+
+    --line:#dbdbdb;
+
+    --soft:#efefef;
+
+    --text:#000;
+
+    --sub:#737373;
+
+    --blue:#0095f6;
+
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+#app{
+
+    width:100%;
+
+    max-width:var(--app-width);
+
+    min-height:100vh;
+
+    margin:auto;
+
+    background:var(--background);
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font:inherit;
+
+}
+
+
+/* =========================================================
+   IMG
+========================================================= */
+
+img{
+
+    display:block;
+
+    width:100%;
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#cfcfcf;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+
+/* =========================================================
+   HIDDEN
+========================================================= */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+#topBar{
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 16px;
+
+    border-bottom:1px solid var(--line);
+
+    position:sticky;
+
+    top:0;
+
+    background:#fff;
+
+    z-index:500;
+
+}
+
+
+.top-left{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+#usernameArea{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    font-size:21px;
+
+    font-weight:700;
+
+}
+
+
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+
+.top-right button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.top-right .material-symbols-outlined{
+
+    font-size:29px;
+
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+#profileSection{
+
+    padding:18px 16px 8px;
+
+}
+
+
+.profile-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+.profile-image-wrap{
+
+    width:92px;
+
+    height:92px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:1px solid var(--line);
+
+}
+
+
+#profileImage{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.profile-stats{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:space-evenly;
+
+}
+
+
+.profile-stat{
+
+    text-align:center;
+
+}
+
+
+.profile-stat strong{
+
+    display:block;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+
+.profile-stat span{
+
+    font-size:14px;
+
+}
+
+
+.profile-info{
+
+    margin-top:18px;
+
+}
+
+
+#displayName{
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+#bioText{
+
+    margin-top:4px;
+
+    font-size:14px;
+
+    white-space:pre-line;
+
+    line-height:1.45;
+
+}
+
+
+#profileLink{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#00376b;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+/* =========================================================
+   PROFILE BUTTONS
+========================================================= */
+
+.profile-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+    margin-top:16px;
+
+}
+
+.profile-buttons button{
+
+    height:34px;
+
+    border-radius:8px;
+
+    background:var(--soft);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.15s;
+
+}
+
+#editProfileBtn{
+
+    flex:1;
+
+}
+
+#shareProfileBtn{
+
+    flex:1;
+
+}
+
+#contactBtn{
+
+    width:40px;
+
+    flex:none;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.profile-buttons button:hover{
+
+    background:#e4e4e4;
+
+}
+
+
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
+
+#highlightSection{
+
+    display:flex;
+
+    gap:16px;
+
+    overflow-x:auto;
+
+    padding:18px 16px;
+
+    scrollbar-width:none;
+
+}
+
+#highlightSection::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.highlight{
+
+    flex:none;
+
+    width:72px;
+
+    cursor:pointer;
+
+}
+
+.highlight-ring{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    padding:2px;
+
+    border:1px solid #d4d4d4;
+
+}
+
+.highlight-ring img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+.highlight-title{
+
+    margin-top:6px;
+
+    text-align:center;
+
+    font-size:12px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+
+/* =========================================================
+   PROFILE TABS
+========================================================= */
+
+#profileTabs{
+
+    display:flex;
+
+    height:44px;
+
+    border-top:1px solid var(--line);
+
+    border-bottom:1px solid var(--line);
+
+}
+
+.profile-tab{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    color:#8a8a8a;
+
+}
+
+.profile-tab.active{
+
+    color:#000;
+
+}
+
+.profile-tab.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:2px;
+
+    background:#000;
+
+}
+
+.profile-tab .material-symbols-outlined{
+
+    font-size:24px;
+
+}
+
+
+/* =========================================================
+   FEED
+========================================================= */
+
+#feed{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:2px;
+
+    background:#fff;
+
+}
+
+/* =========================================================
+   FEED ITEM
+========================================================= */
+
+.feed-item{
+
+    position:relative;
+
+    aspect-ratio:1;
+
+    overflow:hidden;
+
+    background:#efefef;
+
+    cursor:pointer;
+
+}
+
+.feed-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .25s;
+
+}
+
+.feed-item:hover img{
+
+    transform:scale(1.04);
+
+}
+
+
+/* =========================================================
+   MULTIPLE ICON
+========================================================= */
+
+.feed-multiple{
+
+    position:absolute;
+
+    top:8px;
+
+    right:8px;
+
+    color:white;
+
+    font-size:18px;
+
+    text-shadow:0 0 6px rgba(0,0,0,.4);
+
+}
+
+
+/* =========================================================
+   VIDEO ICON
+========================================================= */
+
+.feed-video{
+
+    position:absolute;
+
+    top:8px;
+
+    right:8px;
+
+    color:white;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.feed-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.28);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.2s;
+
+}
+
+.feed-item:hover .feed-overlay{
+
+    opacity:1;
+
+}
+
+.feed-overlay-content{
+
+    display:flex;
+
+    gap:18px;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:15px;
+
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.feed-loading{
+
+    width:100%;
+
+    aspect-ratio:1;
+
+    background:#ececec;
+
+}
+
+/* =========================================================
+   POST MODAL
+========================================================= */
+
+#postModal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.72);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.modal-backdrop{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.modal-container{
+
+    position:relative;
+
+    width:min(1200px,95vw);
+
+    height:min(90vh,900px);
+
+    background:#fff;
+
+    display:flex;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.modal-media{
+
+    flex:1;
+
+    background:#000;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.postSwiper{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.postSwiper img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    background:#000;
+
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.modal-info{
+
+    width:420px;
+
+    background:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.modal-header{
+
+    height:72px;
+
+    border-bottom:1px solid var(--line);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 16px;
+
+}
+
+.modal-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+#modalProfileImage{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+#modalUsername{
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+#modalLocation{
+
+    font-size:12px;
+
+    color:var(--sub);
+
+    margin-top:2px;
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.modal-body{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:18px 16px;
+
+}
+
+#modalCaption{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.modal-actions{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:56px;
+
+    border-top:1px solid var(--line);
+
+    padding:0 10px;
+
+}
+
+.left-actions{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.modal-actions button{
+
+    width:40px;
+
+    height:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.modal-actions .material-symbols-outlined{
+
+    font-size:28px;
+
+}
+
+
+/* =========================================================
+   LIKE
+========================================================= */
+
+#modalLikes{
+
+    padding:0 16px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+#modalDate{
+
+    padding:8px 16px 18px;
+
+    color:var(--sub);
+
+    font-size:12px;
+
+}
+
+/* =========================================================
+   STORY VIEWER
+========================================================= */
+
+#storyViewer{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#000;
+
+    z-index:10000;
+
+}
+
+#storyProgress{
+
+    position:absolute;
+
+    top:16px;
+
+    left:16px;
+
+    right:16px;
+
+    display:flex;
+
+    gap:4px;
+
+}
+
+.story-bar{
+
+    flex:1;
+
+    height:2px;
+
+    background:rgba(255,255,255,.25);
+
+    overflow:hidden;
+
+}
+
+.story-bar-fill{
+
+    width:0;
+
+    height:100%;
+
+    background:#fff;
+
+}
+
+#storyContent{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+#storyContent img{
+
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+}
+
+
+/* =========================================================
+   IMAGE VIEWER
+========================================================= */
+
+#imageViewer{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:11000;
+
+}
+
+#viewerImage{
+
+    max-width:95vw;
+
+    max-height:95vh;
+
+    object-fit:contain;
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+#toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:30px;
+
+    transform:translateX(-50%);
+
+    background:#262626;
+
+    color:#fff;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.25s;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:900px){
+
+    .modal-container{
+
+        width:100vw;
+
+        height:100vh;
+
+        border-radius:0;
+
+        flex-direction:column;
+
+    }
+
+    .modal-media{
+
+        flex:none;
+
+        height:58%;
+
+    }
+
+    .modal-info{
+
+        width:100%;
+
+        flex:1;
+
+    }
+
+}
+
+
+@media (max-width:470px){
+
+    :root{
+
+        --app-width:100%;
+
+    }
+
+    #topBar{
+
+        position:sticky;
+
+        top:0;
+
+    }
+
+}
+
+/* =========================================================
+   LIKE BUTTON
+========================================================= */
+
+.modal-actions .liked{
+
+    color:#ff3040;
+
+    animation:likePop .22s ease;
+
+}
+
+@keyframes likePop{
+
+    0%{
+
+        transform:scale(0.8);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =========================================================
+   MODAL ANIMATION
+========================================================= */
+
+#postModal{
+
+    animation:fadeIn .18s;
+
+}
+
+.modal-container{
+
+    animation:popup .22s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.96);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+#bottomNav{
+
+    position:sticky;
+
+    bottom:0;
+
+    height:50px;
+
+    background:#fff;
+
+    border-top:1px solid var(--line);
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    z-index:400;
+
+}
+
+.nav-btn{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.nav-btn .material-symbols-outlined{
+
+    font-size:28px;
+
+}
+
+.profile-nav img{
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
