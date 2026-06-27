@@ -227,6 +227,27 @@ const DATA = {
                 "assets/highlights/bj/hb4.jpg",
             ]
 
+        },
+
+        {
+
+            title: "프로필",
+
+            cover: "assets/highlights/shot/hsc.jpg",
+
+            stories: [
+
+                "assets/highlights/shot/hs1.png",
+
+                "assets/highlights/shot/hs2.jpg",
+
+                "assets/highlights/shot/hs3.jpg",
+
+                "assets/highlights/shot/hs4.jpg",
+
+                "assets/highlights/shot/hs5.jpg"
+            ]
+
         }
 
     ],
