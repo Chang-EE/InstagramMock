@@ -188,15 +188,23 @@ const DATA = {
 
         {
 
-            title: "Daily",
+            title: "스튜어디스",
 
-            cover: "assets/highlights/daily/cover.jpg",
+            cover: "assets/highlights/airline/hac.jpg",
 
             stories: [
 
-                "assets/highlights/daily/1.jpg",
+                "assets/highlights/airline/ha1.jpg",
 
-                "assets/highlights/daily/2.jpg"
+                "assets/highlights/airline/ha2.jpg",
+
+                "assets/highlights/airline/ha3.jpg",
+
+                "assets/highlights/airline/ha4.jpg",
+
+                "assets/highlights/airline/ha5.jpg",
+
+                "assets/highlights/airline/ha6.jpg"
 
             ]
 
