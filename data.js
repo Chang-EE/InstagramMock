@@ -265,6 +265,193 @@ const DATA = {
 
     posts: [
 
+        {
+
+            id: 17,
+
+            location: "단국대학교 죽전캠퍼스",
+
+            caption: [
+                "단국대 축제 다녀왔어요",
+                "개꼴리는 섹시댄스 연습해서 잔뜩 흔들고 왔지롱",
+                "다들 엄청 많이 반겨주고 좋아해줘서 고마워💙"
+            ],
+
+            images: [
+
+                "assets/posts/posts008/1.png",
+                "assets/posts/posts008/2.png",
+                "assets/posts/posts008/3.png",
+                "assets/posts/posts008/4.png"
+                
+            ],
+
+            likes: 198290,
+
+            comments: 2228,
+
+            date: "2023-09-27"
+
+        }, 
+
+        {
+
+            id: 16,
+
+            location: "MAXIM",
+
+            caption: [
+                "저 맥심 찍었어요오~",
+                "많이들 나보러 구매해줄꺼지?!",
+                "희쨩의 왕큰 쭈쭈랑 온도니 보구 물 많이 빼 오빠❤️"
+            ],
+
+            images: [
+
+                "assets/posts/posts004/1.jpg",
+                "assets/posts/posts004/2.png",
+                "assets/posts/posts004/3.jpg",
+                "assets/posts/posts004/4.jpg",
+                "assets/posts/posts004/5.jpg",
+                "assets/posts/posts004/6.jpg",
+                "assets/posts/posts004/7.jpg"
+                
+            ],
+
+            likes: 204614,
+
+            comments: 2031,
+
+            date: "2023-09-24"
+
+        },     
+
+        {
+
+            id: 15,
+
+            location: "카페",
+
+            caption: [
+                "다음 주에 입을 복장 테스트 겸 카페 왔지용",
+                "뭐인지는 비밀"
+            ],
+
+            images: [
+
+                "assets/posts/posts029/1.png"
+            ],
+
+            likes: 94327,
+
+            comments: 1371,
+
+            date: "2023-09-20"
+
+        },          
+
+        {
+
+            id: 14,
+
+            location: "카페",
+
+            caption: [
+                "출근 전에 응원복 입고 카페에서 쉬고 있었는데 찍혔어요",
+                "너무 예쁘게 잘 나와서 기분 좋음 ㅎ"
+            ],
+
+            images: [
+
+                "assets/posts/posts028/1.png"
+            ],
+
+            likes: 100139,
+
+            comments: 1042,
+
+            date: "2023-09-13"
+
+        },          
+
+        {
+
+            id: 13,
+
+            location: "수원 kt위즈파크",
+
+            caption: [
+                "와 저 관중석에서 춤 춘 쇼츠가 조회수가 미쳤어요!",
+                "이 드레스는 너무 예쁜데, 가슴이 너무 꽉끼어서 답답했어요 ...그래서 좋아해주신건가?"
+            ],
+
+            images: [
+
+                "assets/posts/posts005/1.jpg",
+                "assets/posts/posts005/2.jpg",
+                "assets/posts/posts005/3.jpg"
+            ],
+
+            likes: 105253,
+
+            comments: 983,
+
+            date: "2023-09-11"
+
+        },          
+
+        {
+
+            id: 12,
+
+            location: "오션뷰 호텔",
+
+            caption: [
+                "여름을 보내며, 마지막 바다",
+                "...근데 너무 많이 쳐다보셔서 호텔 수영장으로 들어와서 마저 쉬었어요",
+                "이 비키니도 예쁘지 않아요?"
+            ],
+
+            images: [
+
+                "assets/posts/posts026/1.png",
+                "assets/posts/posts026/2.png"
+            ],
+
+            likes: 71924,
+
+            comments: 494,
+
+            date: "2023-08-30"
+
+        },          
+
+        {
+
+            id: 11,
+
+            location: "서울 한강공원",
+
+            caption: [
+                "부끄러운 옷 입고 한강에서 러닝하다 찍힘 ㅠ",
+                "잠실야구장 앞에 지나가다가 졸지에 사람 많은데서 다 비치는 옷 입고 팬서비스 했어요",
+                "근데 왜 싫지만은 않은걸까..."
+            ],
+
+            images: [
+
+                "assets/posts/posts020/1.png",
+                "assets/posts/posts020/2.png"
+            ],
+
+            likes: 53921,
+
+            comments: 693,
+
+            date: "2023-08-14"
+
+        },               
+
 
         {
 
@@ -418,12 +605,12 @@ const DATA = {
 
             images: [
 
-                "assets/posts/posts001/1.png",
-                "assets/posts/posts001/2.jpg",
-                "assets/posts/posts001/3.jpg",
-                "assets/posts/posts001/4.jpg",
-                "assets/posts/posts001/5.jpg",
-                "assets/posts/posts001/6.jpg"
+                "assets/posts/posts003/1.png",
+                "assets/posts/posts003/2.jpg",
+                "assets/posts/posts003/3.jpg",
+                "assets/posts/posts003/4.jpg",
+                "assets/posts/posts003/5.jpg",
+                "assets/posts/posts003/6.jpg"
             ],
 
             likes: 9134,
