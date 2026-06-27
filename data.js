@@ -267,6 +267,38 @@ const DATA = {
 
         {
 
+            id: 6,
+
+            location: "서울 잠실종합운동장",
+
+            caption: [
+                "사실 저 캐스팅 당했어요!",
+                "kt 치어리더 이창희 인사드립니다아🤗",
+                "너무 설레서 의상도 빌려가지고 집에서부터 입고 출근했어요 히히"
+            ],
+
+            images: [
+
+                "assets/posts/posts014/1.png",
+                "assets/posts/posts014/2.png",
+                "assets/posts/posts014/3.png",
+                "assets/posts/posts014/4.png",
+                "assets/posts/posts014/5.png",
+                "assets/posts/posts014/6.png",
+                "assets/posts/posts014/7.png",
+                "assets/posts/posts014/8.png"
+            ],
+
+            likes: 12185,
+
+            comments: 633,
+
+            date: "2024-03-16"
+
+        },            
+
+        {
+
             id: 5,
 
             location: "서울 잠실종합운동장",
@@ -442,6 +474,7 @@ const DATA = {
             caption: [
                 "비오는 날, 친구들과.", 
                 "이게 낭만이지",
+                "(그와중에 찌찌는 내가 제일 크구만 후훗)"
             ],
 
             images: [
