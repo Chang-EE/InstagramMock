@@ -208,6 +208,25 @@ const DATA = {
 
             ]
 
+        },
+
+        {
+
+            title: "인방 BJ",
+
+            cover: "assets/highlights/bj/hbc.png",
+
+            stories: [
+
+                "assets/highlights/bj/hb1.jpg",
+
+                "assets/highlights/bj/hb2.jpg",
+
+                "assets/highlights/bj/hb3.jpg",
+
+                "assets/highlights/bj/hb4.jpg",
+            ]
+
         }
 
     ],
