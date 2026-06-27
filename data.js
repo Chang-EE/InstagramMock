@@ -267,6 +267,31 @@ const DATA = {
 
         {
 
+            id: 7,
+
+            location: "수원 kt위즈파크",
+
+            caption: [
+                "첫 홈경기 응원!",
+                "2층 단상 느낌이 뭔가 신기했어요",
+                "유니폼도 짱 이뿌 ㅎ (가슴이 끼는건 비밀)"
+            ],
+
+            images: [
+
+                "assets/posts/posts018/1.png"
+            ],
+
+            likes: 11131,
+
+            comments: 481,
+
+            date: "2023-03-18"
+
+        },    
+
+        {
+
             id: 6,
 
             location: "서울 잠실종합운동장",
