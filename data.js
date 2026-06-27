@@ -265,6 +265,89 @@ const DATA = {
 
     posts: [
 
+
+        {
+
+            id: 10,
+
+            location: "강원도 강릉",
+
+            caption: [
+                "여름엔 바다지!",
+                "청순한 흰색이랑, 섹시한 빨간색 중에 뭐가 더 예뻐?",
+                "아찔한 비키니 입고 치어리딩 해보고 싶다..ㅎㅎ 너무 변태같은가"
+            ],
+
+            images: [
+
+                "assets/posts/posts025/1.png",
+                "assets/posts/posts025/2.png",
+                "assets/posts/posts025/3.png",
+                "assets/posts/posts025/4.png"
+            ],
+
+            likes: 67338,
+
+            comments: 825,
+
+            date: "2023-08-09"
+
+        },                
+
+        {
+
+            id: 9,
+
+            location: "워터밤",
+
+            caption: [
+                "제 수영복 어때요?!",
+                "저 보시면 많이 쏴주세요 ㅎㅎ"
+            ],
+
+            images: [
+
+                "assets/posts/posts023/1.png",
+            ],
+
+            likes: 52119,
+
+            comments: 710,
+
+            date: "2023-07-21"
+
+        },                
+
+        {
+
+            id: 8,
+
+            location: "수원 kt위즈파크",
+
+            caption: [
+                "수원의 명물 워터 페스티벌 첫경험",
+                "싹 다 흠뻑 젖어버렸어요 ><",
+                "시원하고 재밌었음!!"
+            ],
+
+            images: [
+
+                "assets/posts/posts006/1.jpg",
+                "assets/posts/posts006/2.jpg",
+                "assets/posts/posts006/3.jpg",
+                "assets/posts/posts006/4.jpg",
+                "assets/posts/posts006/5.jpg",
+                "assets/posts/posts006/6.jpg"
+            ],
+
+            likes: 35178,
+
+            comments: 934,
+
+            date: "2023-07-13"
+
+        },            
+
         {
 
             id: 7,
