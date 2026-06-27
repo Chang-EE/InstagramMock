@@ -268,6 +268,68 @@ const DATA = {
 
         {
 
+            id: 21,
+
+            location: "에버랜드",
+
+            caption: [
+                "미션으로 에버랜드를 가긴 했는데...",
+                "부끄러워서 죽는 줄 알았어요",
+                "지나가던 남자애들이 눈도 못뗴고 바지 밑으로 뭐가 볼록해지더라고요... (흐뭇)"
+            ],
+
+            images: [
+
+                "assets/posts/posts007/1.png",
+                "assets/posts/posts007/2.png",
+                "assets/posts/posts007/3.png",
+                "assets/posts/posts007/4.png",
+                "assets/posts/posts007/5.png",
+                "assets/posts/posts007/6.png",
+                "assets/posts/posts007/7.png",
+                "assets/posts/posts007/8.png",
+                "assets/posts/posts007/9.png",
+                "assets/posts/posts007/10.png",
+                "assets/posts/posts007/11.png"
+                
+            ],
+
+            likes: 671319,
+
+            comments: 10238,
+
+            date: "2023-11-12"
+
+        },         
+
+        {
+
+            id: 20,
+
+            location: "카페",
+
+            caption: [
+                "미션으로 자주 가던 카페에서 메이드복 입고 알바했어요",
+                "어떤 커피로 드릴까요 주인님🩷",
+                "라뗴는 제 우유로 만들어드려용ㅎ (부끄)"
+            ],
+
+            images: [
+
+                "assets/posts/posts024/1.png"
+                
+            ],
+
+            likes: 487214,
+
+            comments: 5435,
+
+            date: "2023-11-02"
+
+        },         
+
+        {
+
             id: 19,
 
             location: "인터넷 방송",
