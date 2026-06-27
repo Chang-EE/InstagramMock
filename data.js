@@ -275,17 +275,17 @@ const DATA = {
 
             images: [
 
-                "assets/posts/post001/1.jpg",
-                "assets/posts/post001/2.jpg",
-                "assets/posts/post001/3.jpg",
-                "assets/posts/post001/4.jpg",
-                "assets/posts/post001/5.jpg",
-                "assets/posts/post001/6.jpg",
-                "assets/posts/post001/7.jpg",
-                "assets/posts/post001/8.jpg",
-                "assets/posts/post001/9.jpg",
-                "assets/posts/post001/10.jpg",
-                "assets/posts/post001/11.jpg",
+                "assets/posts/posts001/1.jpg",
+                "assets/posts/posts001/2.jpg",
+                "assets/posts/posts001/3.jpg",
+                "assets/posts/posts001/4.jpg",
+                "assets/posts/posts001/5.jpg",
+                "assets/posts/posts001/6.jpg",
+                "assets/posts/posts001/7.jpg",
+                "assets/posts/posts001/8.jpg",
+                "assets/posts/posts001/9.jpg",
+                "assets/posts/posts001/10.jpg",
+                "assets/posts/posts001/11.jpg",
 
             ],
 
@@ -330,10 +330,10 @@ const DATA = {
 
             images: [
 
-                "assets/posts/post002/1.jpg",
-                "assets/posts/post002/2.jpg",
-                "assets/posts/post002/3.jpg",
-                "assets/posts/post002/4.jpg"
+                "assets/posts/posts002/1.jpg",
+                "assets/posts/posts002/2.jpg",
+                "assets/posts/posts002/3.jpg",
+                "assets/posts/posts002/4.jpg"
 
             ],
 
@@ -373,12 +373,12 @@ const DATA = {
 
             images: [
 
-                "assets/posts/post031/1.jpg",
-                "assets/posts/post031/2.jpg",
-                "assets/posts/post031/3.jpg",
-                "assets/posts/post031/4.jpg",
-                "assets/posts/post031/5.jpg",
-                "assets/posts/post031/6.jpg"
+                "assets/posts/posts031/1.jpg",
+                "assets/posts/posts031/2.jpg",
+                "assets/posts/posts031/3.jpg",
+                "assets/posts/posts031/4.jpg",
+                "assets/posts/posts031/5.jpg",
+                "assets/posts/posts031/6.jpg"
 
             ],
 
@@ -406,9 +406,9 @@ const DATA = {
 
             images: [
 
-                "assets/posts/post019/1.png",
+                "assets/posts/posts019/1.png",
 
-                "assets/posts/post019/2.png"
+                "assets/posts/posts019/2.png"
 
             ],
 
