@@ -267,12 +267,42 @@ const DATA = {
 
         {
 
+            id: 5,
+
+            location: "서울 잠실종합운동장",
+
+            caption: [
+                "이번엔 잠실 왔어용!",
+                "낮경기라 햇살이 진짜 눈부셨음"
+            ],
+
+            images: [
+
+                "assets/posts/posts001/1.png",
+                "assets/posts/posts001/2.jpg",
+                "assets/posts/posts001/3.jpg",
+                "assets/posts/posts001/4.jpg",
+                "assets/posts/posts001/5.jpg",
+                "assets/posts/posts001/6.jpg"
+            ],
+
+            likes: 9134,
+
+            comments: 539,
+
+            date: "2023-10-01"
+
+        },    
+
+        {
+
             id: 4,
 
             location: "수원 kt위즈파크",
 
             caption: [
-                "지난번에 엄청 반응이 좋길래 또 갔어요 ㅎ. 너무 흥분해서 응원단상까지 올라가버림..ㅎㅎ"
+                "지난번에 엄청 반응이 좋길래 또 갔어요 ㅎ.",
+                "이번엔 너무 흥분해서 응원단상까지 올라가버림.. 헤헤"
             ],
 
             images: [
@@ -324,7 +354,8 @@ const DATA = {
             ================================ */
 
             caption: [
-                "야구 첫 직관인데, 중계화면에 잡혔당 ㅎ"
+                "야구 첫 직관인데, 중계화면에 잡혔당 ㅎ",
+                "홈런을 보니까 나도 모르게 엉덩이가 그만..ㅎㅎ"
             ],
 
             /* ================================
