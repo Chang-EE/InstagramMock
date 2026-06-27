@@ -265,6 +265,61 @@ const DATA = {
 
     posts: [
 
+
+        {
+
+            id: 19,
+
+            location: "인터넷 방송",
+
+            caption: [
+                "여러분 저 인방도 해요",
+                "방송 오면 이런거 잔~뜩 볼 수 있는데에❤️",
+                "꼴리면 참지 마 오빠🤭"
+            ],
+
+            images: [
+
+                "assets/posts/posts009/1.jpg",
+                "assets/posts/posts009/2.jpg",
+                "assets/posts/posts009/3.jpg"
+                
+            ],
+
+            likes: 503216,
+
+            comments: 5102,
+
+            date: "2023-10-19"
+
+        }, 
+
+        {
+
+            id: 18,
+
+            location: "수원 kt위즈파크",
+
+            caption: [
+                "서프라이즈~",
+                "마지막 경기를 기념해서 서프라이즈로 바니걸 입고 응원했어요",
+                "너무 좋아해주던데, 매일 입어야 하나아?"
+            ],
+
+            images: [
+
+                "assets/posts/posts030/1.png"
+                
+            ],
+
+            likes: 300102,
+
+            comments: 3494,
+
+            date: "2023-10-08"
+
+        }, 
+
         {
 
             id: 17,
