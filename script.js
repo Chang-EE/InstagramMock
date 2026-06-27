@@ -37,6 +37,8 @@ function init(){
 
     renderFeed();
 
+    initProfileTabs();
+
     bindEvents();
 
 }
@@ -156,21 +158,37 @@ function renderFeed(){
             `
             : "";
 
-        feed.innerHTML += `
+            feed.innerHTML += `
 
-        <div
-            class="feed-item"
-            data-id="${post.id}">
-
-            <img
-                src="${post.images[0]}"
-                alt="">
-
-            ${multiIcon}
-
-        </div>
-
-        `;
+            <div
+                class="feed-item"
+                data-id="${post.id}">
+            
+                <img
+                    src="${post.images[0]}"
+                    alt="">
+            
+                ${multiIcon}
+            
+                <div class="feed-overlay">
+            
+                    <div>
+            
+                        ❤️ ${post.likes}
+            
+                    </div>
+            
+                    <div>
+            
+                        💬 ${post.comments}
+            
+                    </div>
+            
+                </div>
+            
+            </div>
+            
+            `;
 
     });
 
@@ -335,7 +353,7 @@ function buildPost(){
 
     document
         .getElementById("modalCaption")
-        .textContent = currentPost.caption;
+        .innerHTML = currentPost.caption.join("<br>");
 
     document
         .getElementById("modalLikes")
@@ -736,5 +754,114 @@ function openPrevPost(){
     if(index<=0) return;
 
     openPost(DATA.posts[index-1].id);
+
+}
+
+/* =========================================================
+   PROFILE TAB
+========================================================= */
+
+let currentTab = "posts";
+
+function initProfileTabs(){
+
+    const tabs =
+        document.querySelectorAll(".profile-tab");
+
+    tabs.forEach(tab=>{
+
+        tab.addEventListener("click",()=>{
+
+            tabs.forEach(btn=>{
+
+                btn.classList.remove("active");
+
+            });
+
+            tab.classList.add("active");
+
+            currentTab = tab.dataset.tab;
+
+            changeTab();
+
+        });
+
+    });
+
+}
+
+function changeTab(){
+
+    switch(currentTab){
+
+        case "posts":
+
+            renderFeed();
+
+            break;
+
+        case "reels":
+
+            renderReels();
+
+            break;
+
+        case "tagged":
+
+            renderTagged();
+
+            break;
+
+    }
+
+}
+
+/* =========================================================
+   REELS
+========================================================= */
+
+function renderReels(){
+
+    const feed =
+        document.getElementById("feed");
+
+    feed.innerHTML = `
+
+        <div class="empty-tab">
+
+            <span class="material-symbols-outlined">
+                movie
+            </span>
+
+            <h3>릴스가 없습니다</h3>
+
+        </div>
+
+    `;
+
+}
+
+/* =========================================================
+   TAGGED
+========================================================= */
+
+function renderTagged(){
+
+    const feed =
+        document.getElementById("feed");
+
+    feed.innerHTML = `
+
+        <div class="empty-tab">
+
+            <span class="material-symbols-outlined">
+                person_pin
+            </span>
+
+            <h3>태그된 게시물이 없습니다</h3>
+
+        </div>
+
+    `;
 
 }
