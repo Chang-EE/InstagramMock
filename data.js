@@ -214,11 +214,11 @@ const DATA = {
 
             title: "인방 BJ",
 
-            cover: "assets/highlights/bj/hbc.png",
+            cover: "assets/highlights/bj/hbc.jpg",
 
             stories: [
 
-                "assets/highlights/bj/hb1.jpg",
+                "assets/highlights/bj/hb1.png",
 
                 "assets/highlights/bj/hb2.jpg",
 
