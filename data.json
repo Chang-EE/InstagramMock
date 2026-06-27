@@ -1,0 +1,49 @@
+{
+  "profile": {
+    "username": "username",
+    "displayName": "이름",
+    "bio": "소개글을 여기에 작성하세요.\n줄바꿈도 지원됩니다.",
+    "avatar": "assets/profile/profile.jpg",
+    "followers": "2.1만",
+    "following": "310"
+  },
+  "highlights": [
+    {
+      "title": "Daily",
+      "cover": "assets/profile/profile.jpg",
+      "stories": [
+        { "type": "image", "src": "assets/profile/profile.jpg" }
+      ]
+    },
+    {
+      "title": "Cheer",
+      "cover": "assets/profile/profile.jpg",
+      "stories": [
+        { "type": "image", "src": "assets/profile/profile.jpg" }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": "post001",
+      "images": ["assets/profile/profile.jpg"],
+      "caption": "첫 번째 게시물",
+      "likes": 128,
+      "date": "2026-06-01"
+    },
+    {
+      "id": "post002",
+      "images": ["assets/profile/profile.jpg", "assets/profile/profile.jpg"],
+      "caption": "여러 장 이미지 게시물",
+      "likes": 256,
+      "date": "2026-06-15"
+    },
+    {
+      "id": "post003",
+      "images": ["assets/profile/profile.jpg"],
+      "caption": "세 번째 게시물",
+      "likes": 89,
+      "date": "2026-06-20"
+    }
+  ]
+}
