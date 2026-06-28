@@ -1451,91 +1451,29 @@ a{
 
 }
 
-
 /* =========================================================
-   TABLET
+   TABLET PORTRAIT
 ========================================================= */
 
-/*
-
-@media (min-width:768px) and (max-width:1023px){
+@media (min-width:768px) and (max-width:1023px) and (orientation:portrait){
 
     :root{
-
-        --app-width:100%;
-
+        --app-width:720px;
     }
 
-    #topBar{
-
-        height:72px;
-
-        padding:0 24px;
-
+    body{
+        background:#f2f2f2;
     }
 
-    .profile-image-wrap{
-
-        width:120px;
-
-        height:120px;
-
-    }
-
-    .profile-stat strong{
-
-        font-size:22px;
-
-    }
-
-    .profile-stat span{
-
-        font-size:16px;
-
-    }
-
-    #displayName{
-
-        font-size:18px;
-
-    }
-
-    #bioText{
-
-        font-size:16px;
-
-    }
-
-    .highlight{
-
-        width:90px;
-
-    }
-
-    .highlight-ring{
-
-        width:90px;
-
-        height:90px;
-
-    }
-
-    .highlight-title{
-
-        font-size:14px;
-
-    }
-
-    .profile-buttons button{
-
-        height:42px;
-
-        font-size:16px;
-
+    #app{
+        max-width:var(--app-width);
+        margin:0 auto;
+        background:#fff;
     }
 
 }
-*/
+
+
 
 /* =========================================================
    DESKTOP
