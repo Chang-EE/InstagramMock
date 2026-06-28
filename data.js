@@ -265,10 +265,376 @@ const DATA = {
 
     posts: [
 
+        {
+
+            id: 34,
+
+            location: "수원 행궁동",
+
+            caption: [
+                "오늘은 부끄러운 옷 의첸 미션이 있었어요",
+                "거기에다가 이 옷 그대로 행궁동까지 가서 미션하고 오라고 해서 엄청 당황했는데",
+                "가만히 서있어도 팬티가 다 보이는 옷이라 너무 부끄러웠어요 ㅠㅠ"
+            ],
+
+            images: [
+
+                "assets/posts/posts034/1.png",
+                "assets/posts/posts034/2.png",
+                "assets/posts/posts034/3.png",
+                "assets/posts/posts034/4.png",
+                "assets/posts/posts034/5.png",
+                "assets/posts/posts034/6.png",
+                "assets/posts/posts034/7.png",
+                "assets/posts/posts034/8.png",
+                "assets/posts/posts034/9.png",
+                "assets/posts/posts034/10.png",
+                "assets/posts/posts034/11.png",
+                "assets/posts/posts034/12.png",
+                "assets/posts/posts034/13.png"
+                
+            ],
+
+            likes: 1109812,
+
+            comments: 21492,
+
+            date: "2024-06-13"
+
+        },             
 
         {
 
-            id: 21,
+            id: 33,
+
+            location: "",
+
+            caption: [
+                "오늘 방송 엄청 재밌었어!!",
+                "오빠들도 열심히 (채팅) 쳤어? ㅎㅎ",
+                "오빠들이 희쨩 보고 (짐) 싼거 보고싶다아"
+            ],
+
+            images: [
+
+                "assets/posts/posts033/1.jpg",
+                "assets/posts/posts033/2.jpg"
+                
+            ],
+
+            likes: 1011349,
+
+            comments: 14023,
+
+            date: "2024-06-03"
+
+        },         
+        
+
+        {
+
+            id: 32,
+
+            location: "",
+
+            caption: [
+                "나 몇살같아보여? ㅎㅎ",
+                "가슴이랑 엉덩이가 넘쳐나올거 같아!!",
+                "있지이... 우리 수업 땡떙이 치고 양호실에서 같이 쉴래?"
+            ],
+
+            images: [
+
+                "assets/posts/posts017/1.png",
+                "assets/posts/posts017/2.png",
+                "assets/posts/posts017/3.png",
+                "assets/posts/posts017/4.png",
+                "assets/posts/posts017/5.png"
+                
+            ],
+
+            likes: 882371,
+
+            comments: 16295,
+
+            date: "2024-05-30"
+
+        },                    
+        
+        {
+
+            id: 31,
+
+            location: "",
+
+            caption: [
+                "팔로워 100만 기원 사진 개방! v2",
+                "청순매력 끝판왕",
+                "흰티에 청바지 모음집!"
+            ],
+
+            images: [
+
+                "assets/posts/posts016/1.png",
+                "assets/posts/posts016/2.jpg",
+                "assets/posts/posts016/3.jpg",
+                "assets/posts/posts016/4.png",
+                "assets/posts/posts016/5.png",
+                "assets/posts/posts016/6.png",
+                "assets/posts/posts016/7.png"
+
+                
+            ],
+
+            likes: 992341,
+
+            comments: 11012,
+
+            date: "2024-05-14"
+
+        },            
+
+
+        {
+
+            id: 30,
+
+            location: "",
+
+            caption: [
+                "어린이날 기념 컨셉샷",
+                "우리 애기이 우유 머그까아?!",
+                "뭐어어?! 누나 맘마 먹고 싶따구우? 으이구우 ㅎㅎ"
+            ],
+
+            images: [
+
+                "assets/posts/posts032/1.png",
+                "assets/posts/posts032/2.png"
+
+            ],
+
+            likes: 1102291,
+
+            comments: 18923,
+
+            date: "2024-05-05"
+
+        },            
+
+        {
+
+            id: 29,
+
+            location: "",
+
+            caption: [
+                "팔로워 100만 기원 사진 개방!",
+                "자세히 보면 뭐가 보일지도...? (므흣)"
+            ],
+
+            images: [
+
+                "assets/posts/posts012/1.png",
+                "assets/posts/posts012/2.png",
+                "assets/posts/posts012/3.png",
+                "assets/posts/posts012/4.png"
+
+                
+            ],
+
+            likes: 1202394,
+
+            comments: 15328,
+
+            date: "2024-04-30"
+
+        },            
+
+
+        {
+
+            id: 28,
+
+            location: "",
+
+            caption: [
+                "나랑 데이트 할래?",
+                "아까부터 어딜 뚤어져라 보는거야아 으이구",
+                "나중가서는 술집 밖에 팬분들이 너무 많아서 정신없었스 ㅎㅎ"
+            ],
+
+            images: [
+
+                "assets/posts/posts011/1.png",
+                "assets/posts/posts011/2.png",
+                "assets/posts/posts011/3.png",
+                "assets/posts/posts011/4.png",
+                "assets/posts/posts011/5.png"
+
+                
+            ],
+
+            likes: 932158,
+
+            comments: 10324,
+
+            date: "2024-04-10"
+
+        },            
+
+        {
+
+            id: 27,
+
+            location: "서울 잠실종합운동장",
+
+            caption: [
+                "쉬는 날 놀러갔다가 흥을 주체 못하고 단상에 또 올라가버림 ㅎ",
+                "야구 보면서 홀짝홀짝 마시다가 완전 만취해버렸어 헤헤",
+                "골뱅이 희쨩 오때? 꼴려??"
+            ],
+
+            images: [
+
+                "assets/posts/posts022/1.png",
+                "assets/posts/posts022/2.png",
+                "assets/posts/posts022/3.png"
+
+                
+            ],
+
+            likes: 893943,
+
+            comments: 7234,
+
+            date: "2024-03-18"
+
+        },            
+
+        {
+
+            id: 26,
+
+            location: "클럽",
+
+            caption: [
+                "클럽 처음 가봐서 되게 민망민망했다능",
+                "떨려서 곰인형 안고 다녔어요🐻"
+            ],
+
+            images: [
+
+                "assets/posts/posts027/1.png"
+
+                
+            ],
+
+            likes: 733943,
+
+            comments: 5372,
+
+            date: "2024-03-14"
+
+        },              
+
+
+        {
+
+            id: 25,
+
+            location: "서울 성수동",
+
+            caption: [
+                "지난주에 간 곳을 이런 복장으로 또 갈 줄은...",
+                "지나가는 사람마다 다 쳐다봐서 너무 부끄러웠어요",
+                "결국 네컷까지 찍어버림"
+            ],
+
+            images: [
+
+                "assets/posts/posts015/1.png",
+                "assets/posts/posts015/2.png",
+                "assets/posts/posts015/3.png",
+                "assets/posts/posts015/4.png",
+                "assets/posts/posts015/5.png",
+                "assets/posts/posts015/6.png"
+
+                
+            ],
+
+            likes: 899120,
+
+            comments: 9283,
+
+            date: "2024-03-08"
+
+        },              
+
+        {
+
+            id: 24,
+
+            location: "서울 성수동",
+
+            caption: [
+                "성수동 나들이",
+                "알아봐주시는 분들이 많아서 감사했어요 ㅎㅎ",
+                "마지막에 서비스 의상 있어요 (웃음)"
+            ],
+
+            images: [
+
+                "assets/posts/posts010/1.png",
+                "assets/posts/posts010/2.png",
+                "assets/posts/posts010/3.png",
+                "assets/posts/posts010/4.png",
+                "assets/posts/posts010/5.png",
+                "assets/posts/posts010/6.png",
+                "assets/posts/posts010/7.png"
+
+                
+            ],
+
+            likes: 398937,
+
+            comments: 4338,
+
+            date: "2024-03-02"
+
+        },              
+
+
+        {
+
+            id: 23,
+
+            location: "스키 리조트",
+
+            caption: [
+                "구단에 말씀 드려서 빌려왔어요 ㅎㅎ",
+                "서비스 복장입고도 타봤는데, 너무 시강이라 부끄러웠어요"
+            ],
+
+            images: [
+
+                "assets/posts/posts013/1.png",
+                "assets/posts/posts013/2.png"
+                
+            ],
+
+            likes: 581157,
+
+            comments: 7921,
+
+            date: "2024-01-16"
+
+        },         
+
+
+        {
+
+            id: 22,
 
             location: "에버랜드",
 
@@ -304,7 +670,7 @@ const DATA = {
 
         {
 
-            id: 20,
+            id: 21,
 
             location: "카페",
 
@@ -330,7 +696,7 @@ const DATA = {
 
         {
 
-            id: 19,
+            id: 20,
 
             location: "인터넷 방송",
 
@@ -358,7 +724,7 @@ const DATA = {
 
         {
 
-            id: 18,
+            id: 19,
 
             location: "수원 kt위즈파크",
 
@@ -384,7 +750,7 @@ const DATA = {
 
         {
 
-            id: 17,
+            id: 18,
 
             location: "단국대학교 죽전캠퍼스",
 
@@ -413,7 +779,7 @@ const DATA = {
 
         {
 
-            id: 16,
+            id: 17,
 
             location: "MAXIM",
 
@@ -445,7 +811,7 @@ const DATA = {
 
         {
 
-            id: 15,
+            id: 16,
 
             location: "카페",
 
@@ -469,7 +835,7 @@ const DATA = {
 
         {
 
-            id: 14,
+            id: 15,
 
             location: "카페",
 
@@ -493,7 +859,7 @@ const DATA = {
 
         {
 
-            id: 13,
+            id: 14,
 
             location: "수원 kt위즈파크",
 
@@ -519,7 +885,7 @@ const DATA = {
 
         {
 
-            id: 12,
+            id: 13,
 
             location: "오션뷰 호텔",
 
@@ -545,7 +911,7 @@ const DATA = {
 
         {
 
-            id: 11,
+            id: 12,
 
             location: "서울 한강공원",
 
@@ -572,7 +938,7 @@ const DATA = {
 
         {
 
-            id: 10,
+            id: 11,
 
             location: "강원도 강릉",
 
@@ -600,7 +966,7 @@ const DATA = {
 
         {
 
-            id: 9,
+            id: 10,
 
             location: "워터밤",
 
@@ -624,7 +990,7 @@ const DATA = {
 
         {
 
-            id: 8,
+            id: 9,
 
             location: "수원 kt위즈파크",
 
@@ -651,6 +1017,32 @@ const DATA = {
             date: "2023-07-13"
 
         },            
+
+        {
+
+            id: 8,
+
+            location: "광주 기아챔피언스필드",
+
+            caption: [
+                "원정팬분들도 좋아해주셔서 퇴근길에 팬서비스해드렸어요 ㅎ",
+                "뭔가 인기를 실감한달까",
+                "희쨩 보러 마니마니 찾아와주세요😘"
+            ],
+
+            images: [
+
+                "assets/posts/posts021/1.png"
+            ],
+
+            likes: 10831,
+
+            comments: 623,
+
+            date: "2023-05-23"
+
+        },    
+
 
         {
 
