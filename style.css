@@ -1442,3 +1442,119 @@ a{
     }
 
 }
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width:768px) and (max-width:1023px){
+
+    :root{
+
+        --app-width:100%;
+
+    }
+
+    #topBar{
+
+        height:72px;
+
+        padding:0 24px;
+
+    }
+
+    .profile-image-wrap{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .profile-stat strong{
+
+        font-size:22px;
+
+    }
+
+    .profile-stat span{
+
+        font-size:16px;
+
+    }
+
+    #displayName{
+
+        font-size:18px;
+
+    }
+
+    #bioText{
+
+        font-size:16px;
+
+    }
+
+    .highlight{
+
+        width:90px;
+
+    }
+
+    .highlight-ring{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .highlight-title{
+
+        font-size:14px;
+
+    }
+
+    .profile-buttons button{
+
+        height:42px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width:1024px){
+
+    body{
+
+        background:#f2f2f2;
+
+    }
+
+    #app{
+
+        max-width:935px;
+
+        min-height:100vh;
+
+        background:#fff;
+
+        box-shadow:none;
+
+    }
+
+    #topBar{
+
+        position:sticky;
+
+        top:0;
+
+    }
+
+}
