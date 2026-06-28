@@ -387,6 +387,8 @@ function buildPost(){
 
         });
 
+    console.log(document.querySelector(".swiper-wrapper").innerHTML);
+
     updateActionButtons();
     bindPostActions();
 
