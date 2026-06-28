@@ -229,6 +229,36 @@ const DATA = {
                 "assets/highlights/bj/hb3.jpg",
 
                 "assets/highlights/bj/hb4.jpg",
+
+                "assets/highlights/bj/hb5.jpg",
+
+                "assets/highlights/bj/hb6.jpg",
+
+                "assets/highlights/bj/hb7.jpg",
+
+                "assets/highlights/bj/hb8.png",
+
+                "assets/highlights/bj/hb9.png",
+
+                "assets/highlights/bj/hb10.png",
+
+                "assets/highlights/bj/hb11.png",
+                
+                "assets/highlights/bj/hb12.png",
+
+                "assets/highlights/bj/hb13.png",
+
+                "assets/highlights/bj/hb14.png",
+
+                "assets/highlights/bj/hb15.png",
+
+                "assets/highlights/bj/hb16.png",
+
+                "assets/highlights/bj/hb17.png",
+
+                "assets/highlights/bj/hb18.png",
+
+                "assets/highlights/bj/hb19.png"
             ]
 
         },
