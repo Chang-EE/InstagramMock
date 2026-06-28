@@ -1454,21 +1454,20 @@ a{
 /* =========================================================
    TABLET PORTRAIT
 ========================================================= */
-
 @media (min-width:768px) and (max-width:1023px) and (orientation:portrait){
 
     :root{
-        --app-width:720px;
+        --app-width:100%;
     }
 
     body{
-        background:#f2f2f2;
+        background:#fff;
     }
 
     #app{
-        max-width:var(--app-width);
-        margin:0 auto;
-        background:#fff;
+        width:100%;
+        max-width:none;
+        margin:0;
     }
 
 }
