@@ -1343,3 +1343,102 @@ a{
     object-fit:cover;
 
 }
+
+/* =========================================================
+   EMPTY TAB
+========================================================= */
+
+.empty-tab{
+
+    width:100%;
+
+    min-height:220px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#777;
+
+}
+
+.empty-tab .material-symbols-outlined{
+
+    font-size:56px;
+
+}
+
+/* =========================================================
+   FEED HOVER
+========================================================= */
+
+.feed-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+.feed-item img{
+
+    transition:.25s;
+}
+
+.feed-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:24px;
+
+    opacity:0;
+
+    transition:.25s;
+
+    font-weight:600;
+
+}
+
+.feed-item:hover img{
+
+    transform:scale(1.04);
+
+    filter:brightness(.72);
+
+}
+
+.feed-item:hover .feed-overlay{
+
+    opacity:1;
+
+}
+
+@media (hover:none){
+
+    .feed-overlay{
+
+        display:none;
+
+    }
+
+}

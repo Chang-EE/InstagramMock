@@ -827,7 +827,7 @@ const DATA = {
                 "assets/posts/posts004/4.jpg",
                 "assets/posts/posts004/5.jpg",
                 "assets/posts/posts004/6.jpg",
-                "assets/posts/posts004/7.jpg"
+                "assets/posts/posts004/7.png"
                 
             ],
 
