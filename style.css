@@ -1456,18 +1456,14 @@ a{
 ========================================================= */
 @media (min-width:768px) and (max-width:1023px) and (orientation:portrait){
 
-    :root{
-        --app-width:100%;
-    }
-
     body{
         background:#fff;
     }
 
     #app{
-        width:100%;
+        width:100vw;
         max-width:none;
-        margin:0;
+        min-height:100vh;
     }
 
 }
@@ -1507,3 +1503,4 @@ a{
     }
 
 }
+
